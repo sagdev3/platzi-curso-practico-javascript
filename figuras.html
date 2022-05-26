@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geometricas | Curso Pactico de javascript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container--header">
+        <h1>Figuras Geometricas</h1>
+        <p>Primer taller del curso Pactico de javascript</p>
+      </div>
+    </header>
+    <main class="main-container">
+      <section class="container--first-part">
+        <!-- Calcular Cuadrado -->
+        <section class="container--cuadrado container--figuras">
+          <h2>Calcular el area y perimetro de un cuadrado</h2>
+          <form action="">
+            <label for="input-cuadrado"
+              >Escribir cuanto mide cada lado del cuadrado:</label
+            >
+            <input type="number" id="input-cuadrado" />
+            <div class="form-group-buttons">
+              <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular perimetro
+              </button>
+              <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular area
+              </button>
+            </div>
+            <div class="result">
+              <input type="text" class="result--input" id="result-cuadrado" />
+            </div>
+          </form>
+        </section>
+        <!-- Calcular Triangulo -->
+        <section class="container--triangulo container--figuras">
+          <h2>Calcular el area y perimetro de un Triangulo</h2>
+          <form action="">
+            <label for="lado1-triangulo"
+              >Escribir cuanto mide el primer lado del triangulo</label
+            >
+            <input type="number" id="lado1-triangulo" />
+
+            <label for="lado2-triangulo"
+              >Escribir cuanto mide el segundo lado del triangulo</label
+            >
+            <input type="number" id="lado2-triangulo" />
+
+            <label for="base-triangulo"
+              >Escribir cuanto mide la base del triangulo</label
+            >
+            <input type="number" id="base-triangulo" />
+
+            <label for="altura-triangulo"
+              >Escribir cuanto mide la altura del triangulo</label
+            >
+            <input type="number" id="altura-triangulo" />
+            <div class="form-group-buttons">
+              <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular perimetro
+              </button>
+              <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular area
+              </button>
+            </div>
+            <div class="result">
+              <input type="text" class="result--input" id="result-triangulo" />
+            </div>
+          </form>
+        </section>
+      </section>
+      <section class="container--second-part">
+        <!-- Calcular Circulo -->
+        <section class="container--circulo container--figuras">
+          <h2>Calcular el area, diametro y perimetro de un circulo</h2>
+          <form action="">
+            <label for="input-radio"
+              >Escribir cuanto mide el radio del circulo:</label
+            >
+            <input type="number" id="input-radio" />
+            <div class="form-group-buttons btns-circulo">
+              <button type="button" onclick="calcularDametroCirculo()">
+                Calcular diametro
+              </button>
+              <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular perimetro
+              </button>
+              <button type="button" onclick="calcularAreaCirculo()">
+                Calcular area
+              </button>
+            </div>
+            <div class="result">
+              <input type="text" class="result--input" id="result-circulo" />
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script type="text/javascript" src="figuras.js"></script>
+  </body>
+</html>
