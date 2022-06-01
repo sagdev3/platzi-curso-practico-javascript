@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descuento con cupones</title>
+    <link rel="stylesheet" href="cupones.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="container-cupones">
+        <div class="cupones--title">
+          <h1>Compra con descuento</h1>
+          <p>Obten un descuento especifico por el cupon que elijas</p>
+        </div>
+        <form class="form-descuento">
+          <label for="precio-input" class="descuento-label"
+            >Cual es el precio de tu compra</label
+          >
+          <input
+            type="number"
+            id="precio-input"
+            placeholder="Escribe el precio"
+            class="form-input"
+          />
+          <label for="descuento-select" class="descuento-label"
+            >Elije tu cupon</label
+          >
+          <input
+            list="descuentos-select"
+            name="descuento-select"
+            id="descuento-select"
+          />
+
+          <datalist id="descuentos-select">
+            <option value="python"></option>
+            <option value="javascript"></option>
+            <option value="css"></option>
+            <option value="html"></option>
+          </datalist>
+          <button type="button" onclick="btnCalcularDescuento()">
+            Calcular Descuento
+          </button>
+        </form>
+      </section>
+      <section class="section-resultado" id="section-resultado"></section>
+    </main>
+
+    <script src="cupones.js"></script>
+  </body>
+</html>
