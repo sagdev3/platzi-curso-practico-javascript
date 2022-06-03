@@ -1,20 +1,37 @@
-const lista1 = [
-  100, 200, 500, 600, 500, 400, 20, 600, 700, 700, 800, 400000000,
-];
-const mitadLista = parseInt(lista1.length / 2);
-function esPar(numerito) {
-  if (numerito % 2 === 0) {
-    return true;
+function calcularMediaAritmeticaPar(lista) {
+  const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
+    return valorAcumulado + nuevoElemento;
+  });
+  const promedioList = sumaLista / lista.length;
+  return promedioList;
+}
+
+function medianaAritmetica(lista) {
+  const mitadLista = parseInt(lista.length / 2);
+
+  function esPar(numerito) {
+    if (numerito % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  let mediana;
+
+  if (esPar(lista.length)) {
+    const elemento1 = lista1[mitadLista];
+    const elemento2 = lista1[mitadLista - 1];
+    const promedioElemnto1y2 = calcularMediaAritmeticaPar([
+      elemento1,
+      elemento2,
+    ]);
+    mediana = promedioElemnto1y2;
+    return mediana;
   } else {
-    return false;
+    mediana = lista[mitadLista];
+    return mediana;
   }
 }
-let mediana;
-
-if (esPar(lista1.length)) {
-  const elemento1 = lista1[mitadLista];
-  const elemento2 = lista1[mitadLista - 1];
-  mediana = (elemento1 + elemento2) / 2;
-} else {
-  mediana = lista1[mitadLista];
-}
+const lista1 = [200, 100, 1000, 750, 500, 400000000];
+lista1.sort((a, b) => a - b);
+console.log(medianaAritmetica(lista1));
